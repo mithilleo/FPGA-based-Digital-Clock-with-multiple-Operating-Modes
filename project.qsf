@@ -1,0 +1,98 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2021  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+# Date created = 15:17:21  September 15, 2026
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		project_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Intel recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY project
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:17:21  SEPTEMBER 15, 2026"
+set_global_assignment -name LAST_QUARTUS_VERSION "21.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 780
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name VERILOG_FILE project.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_Y2 -to clk
+set_location_assignment PIN_Y23 -to rst_n
+set_location_assignment PIN_AB22 -to seg_min_ones[0]
+set_location_assignment PIN_AC15 -to seg_min_ones[1]
+set_location_assignment PIN_AB21 -to seg_min_ones[2]
+set_location_assignment PIN_Y17 -to seg_min_ones[3]
+set_location_assignment PIN_AC21 -to seg_min_ones[4]
+set_location_assignment PIN_Y16 -to seg_min_ones[5]
+set_location_assignment PIN_AD21 -to seg_min_ones[6]
+set_location_assignment PIN_AE16 -to seg_min_tens[0]
+set_location_assignment PIN_AD15 -to seg_min_tens[1]
+set_location_assignment PIN_AE15 -to seg_min_tens[2]
+set_location_assignment PIN_AC19 -to seg_min_tens[3]
+set_location_assignment PIN_AF16 -to seg_min_tens[4]
+set_location_assignment PIN_AD19 -to seg_min_tens[5]
+set_location_assignment PIN_AF15 -to seg_min_tens[6]
+set_location_assignment PIN_AF24 -to seg_hr_ones[0]
+set_location_assignment PIN_AE21 -to seg_hr_ones[1]
+set_location_assignment PIN_AF25 -to seg_hr_ones[2]
+set_location_assignment PIN_AC22 -to seg_hr_ones[3]
+set_location_assignment PIN_AE22 -to seg_hr_ones[4]
+set_location_assignment PIN_AF21 -to seg_hr_ones[5]
+set_location_assignment PIN_AF22 -to seg_hr_ones[6]
+set_location_assignment PIN_AD22 -to seg_hr_tens[0]
+set_location_assignment PIN_AG25 -to seg_hr_tens[1]
+set_location_assignment PIN_AD25 -to seg_hr_tens[2]
+set_location_assignment PIN_AH25 -to seg_hr_tens[3]
+set_location_assignment PIN_AE25 -to seg_hr_tens[4]
+set_location_assignment PIN_AG22 -to seg_hr_tens[5]
+set_location_assignment PIN_AE24 -to seg_hr_tens[6]
+set_location_assignment PIN_AB28 -to mode_sel[0]
+set_location_assignment PIN_AC28 -to mode_sel[1]
+set_location_assignment PIN_AE20 -to buzzer
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
